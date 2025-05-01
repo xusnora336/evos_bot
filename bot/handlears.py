@@ -5,6 +5,8 @@ from aiogram.filters import StateFilter
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, FSInputFile
 
+from keyboards import filliallar_btn_ru, toshkent_sh_btn_ru, geolokatsiya_btn_ru
+from keyboards import btn_ru, uz_ru_btn
 from keyboards import toshkent_sh_btn
 from keyboards import geolokatsiya_btn
 from keyboards import filliallar_btn
@@ -84,7 +86,7 @@ async def orqaga3(message: Message):
 
 
 @router.message(F.text=="Orqaga")
-async def Orqaga(message: Message):
+async def Orqagaaa(message: Message):
     await message.answer("Siz orqaga qayittingiz", reply_markup=btn)
 
 
@@ -98,7 +100,7 @@ async def yaqin_filliallarni_korsatish(message: Message):
 
 
 @router.message(F.text=="orqaga")
-async def orqaga(message: Message):
+async def orqagaaa(message: Message):
     await message.answer("orqaga qayittingiz", reply_markup=filliallar_btn)
 
 
@@ -124,3 +126,152 @@ async def kontakt_manzil(message: Message):
           "\n"
           "Kontakt: +998 712031212")
     await message.answer_photo(photo=img,caption=text,reply_markup=btn)
+
+
+
+#######################################################
+@router.message(F.text=="uz/ru til")
+async def uz_ru_til(message: Message):
+    await message.answer("Tilni tanlang: ", reply_markup=uz_ru_btn)
+
+@router.message(F.text=="uz")
+async def uz(message: Message):
+    await message.answer("Siz o'zbekchani tanladingiz", reply_markup=btn)
+
+@router.message(F.text=="ru")
+async def ru(message: Message):
+    await message.answer("Siz ruschani tanladingiz", reply_markup=btn_ru)
+
+
+@router.message(F.text=="🏢 О компании")
+async def kompanii(message: Message):
+
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "evos.png"))
+    txt=("Сеть ресторанов быстрого обслуживания EVOS® не стоит на месте,\n"
+         "а постоянно растет и развивается вместе с вами и для вас! Мы расширяем свою географию и открываем новые филиалы практически каждый месяц. \n"
+        "Сейчас в нашей сети насчитывается более 70 филиалов по всему Узбекистану. Поэтому мы всегда в поиске динамичных и активных людей,\n"
+         " которые хотят стать частью нашей команды и готовы строить свою карьеру в EVOS®.\n"
+        "EVOS® – это надежный бренд, которому доверяют. Работа в EVOS® – гарантия стабильного заработка и перспективы карьерного роста.\n"
+        "kengaytiramiz va geyarli har oyda yangi filliallarni\n"
+        "ochamiz.\n"
+        "Начни свою карьеру в EVOS® уже сейчас\n"
+        )
+    await message.answer_photo(photo=img,caption=txt,reply_markup=btn_ru)
+
+
+@router.message(F.text=="📍 Филиалы")
+async def filliali(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "evos.png"))
+    txt=("EVOS - крупнейшая фастфуд-компания в Узбекистане.\n"
+         "На данный момент открыто более 70 торговых точек и\n"
+         " современное многопрофильное производство\n"
+         "Сотрудники компании это большая семья, которая развивается вместе и растет изо дня в день\n"
+         "Компания EVOS расширяется каждый день, сегодня нас более полутора тысяч.\n"
+         " Стань частью нашей команды, добро пожаловать в семью EVOS")
+    await message.answer_photo(photo=img,caption=txt, reply_markup=filliallar_btn_ru)
+
+@router.message(F.text=="🏢 Головной офис")
+async def golovnoy_ofis(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "ofis.png"))
+    text=("Адрес:  ул. Фурката 175, 1 подъезд, 4 этаж.\n"
+          "Ориентир: MAKRO THE TOWER")
+    await message.answer_photo(photo=img,caption=text,reply_markup=filliallar_btn_ru)
+
+@router.message(F.text=="г. Ташкент")
+async def g_toshkent(message: Message):
+    await message.answer("г. Ташкент",reply_markup=toshkent_sh_btn_ru)
+
+@router.message(F.text=="📍 Samarqand Darvoza")
+async def Samarqand_darvoza(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "samarqand_darvoza.png"))
+    text=("Филиал: Самарканд дарвоза\n"
+          "Адрес: ул. Коратош, 5А")
+    await message.answer_photo(photo=img,caption=text,reply_markup=toshkent_sh_btn_ru)
+
+@router.message(F.text=="📍 Алайский базар")
+async def alayskiy_bazar(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "oloy_bozori.png"))
+    text=("Филиал: Алайский базар\n"
+          "Адрес: просп. Амира Темура, 42\n"
+          "Контакты: +998 71 203 12 12")
+    await message.answer_photo(photo=img,caption=text,reply_markup=toshkent_sh_btn_ru)
+
+@router.message(F.text=="📍 Малика")
+async def Malika(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "malika.png"))
+    text=("Филиал: Малика\n"
+          "Адрес: ул. Богиравон, 29\n"
+          "Контакты: +998 71 203 12 12")
+    await message.answer_photo(photo=img,caption=text,reply_markup=toshkent_sh_btn_ru)
+
+@router.message(F.text=="📍 Яхъё Гулямова, 94")
+async def yahyo_g(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "yahyo_g.png"))
+    text=("Филиал: улица Яхъё Гулямова, 94\n"
+          "Адрес: улица Яхъё Гулямова, 94\n")
+    await message.answer_photo(photo=img,caption=text,reply_markup=toshkent_sh_btn_ru)
+
+@router.message(F.text=="Назад")
+async def nazad(message: Message):
+    await message.answer("Назад",reply_markup=filliallar_btn_ru)
+
+
+@router.message(F.text=="⬅️ Назад")
+async def oorqaga(message: Message):
+    await message.answer("⬅️ Назад", reply_markup=btn)
+
+
+
+@router.message(F.text=="☕️ Показать ближайший филиал")
+async def blijayushiy_fillial(message: Message):
+    await message.answer("Отправьте свое местоположение для определения ближайшего филиала",reply_markup=geolokatsiya_btn_ru)
+
+@router.message(F.text=="отправить геолокацию")
+async def otpravit(message: Message):
+    await message.answer("",reply_markup=geolokatsiya_btn_ru)
+
+
+
+@router.message(F.text=="Назад ↩️")
+async def orqagaa(message: Message):
+    await message.answer("Назад ↩️", reply_markup=btn_ru)
+
+
+@router.message(F.text=="📱 Меню")
+async def menu(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "menu.png"))
+    text=("Перейти на сайт Evos (https://evos.uz/)\n"
+          "Instagram (https://www.instagram.com/evosuzbekistan/)\n"
+          "|Telegram (https://t.me/evosdeliverybot)|\n"
+          "Facebook (https://www.facebook.com/evosuzbekistan/)")
+    await message.answer_photo(photo=img,caption=text,reply_markup=btn_ru)
+
+@router.message(F.text=="🗣 Новости")
+async def novosti(message: Message):
+    await message.answer("Новости компании:\n"
+                         "Акции\n"
+                         "Новые ветки\n"
+                         "Свежие торты и т. д.",reply_markup=btn_ru)
+
+
+@router.message(F.text=="📞 Контакты/Адрес")
+async def kontakt_manzil(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "evos.png"))
+    text=("📍Адрес:  ул. Фурката 175, 1 подъезд, 2 этаж.\n"
+          "📌Ориентир: MAKRO THE TOWER\n"
+          "📲 Контакты: +998 71 203 12 12\n")
+    await message.answer_photo(photo=img,caption=text,reply_markup=btn_ru)
+
+@router.message(F.text=="🇺🇿/🇷🇺 Язык")
+async def rru(message: Message):
+    await message.answer("Смена языка",reply_markup=uz_ru_btn)
+
+@router.message(F.text=="uz")
+async def uzz(message: Message):
+    await message.answer("Танланди: 🇺🇿 O'zbekcha", reply_markup=btn)
+
+@router.message(F.text=="ru")
+async def ruu(message: Message):
+    await message.answer("Выбрано: 🇷🇺 Русский", reply_markup=btn_ru)
+
+

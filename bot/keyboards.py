@@ -12,6 +12,14 @@ btn=ReplyKeyboardMarkup(
          KeyboardButton(text="uz/ru til")],
     ],resize_keyboard=True,)
 
+uz_ru_btn=ReplyKeyboardMarkup(
+
+    keyboard=[
+        [KeyboardButton(text="uz"),
+         KeyboardButton(text="ru"),],
+    ],resize_keyboard=True,
+)
+
 
 filliallar_btn=ReplyKeyboardMarkup(
     keyboard=[
@@ -35,4 +43,39 @@ toshkent_sh_btn=ReplyKeyboardMarkup(
          KeyboardButton(text="Yahyo G'ulomov, 94")],
         [KeyboardButton(text="Orqaga3"),]
     ]
+)
+
+btn_ru=ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="🏢 О компании"),
+         KeyboardButton(text="📍 Филиалы"),],
+        [KeyboardButton(text="💼 Вакансии"),],
+        [KeyboardButton(text="📱 Меню"),
+         KeyboardButton(text="🗣 Новости")],
+        [KeyboardButton(text="📞 Контакты/Адрес"),
+         KeyboardButton(text="🇺🇿/🇷🇺 Язык")],
+    ],resize_keyboard=True,)
+
+filliallar_btn_ru=ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="☕️ Показать ближайший филиал"),],
+        [KeyboardButton(text="🏢 Головной офис"),
+         KeyboardButton(text="г. Ташкент")],
+        [KeyboardButton(text="Назад ↩️")]],resize_keyboard=True,)
+
+toshkent_sh_btn_ru=ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="📍 Samarqand Darvoza"),
+         KeyboardButton(text="📍 Алайский базар"),],
+        [KeyboardButton(text="📍 Малика"),
+         KeyboardButton(text="📍 Яхъё Гулямова, 94")],
+        [KeyboardButton(text="Назад"),]
+    ]
+)
+
+geolokatsiya_btn_ru=ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="отправить геолокацию"),],
+        [KeyboardButton(text="⬅Назад"),],
+    ],resize_keyboard=True,
 )
