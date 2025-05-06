@@ -54,7 +54,7 @@ Jamoamizga qo‘shiling! Biz EVOS taomlarini yetkazib berish uchun shaxsiy avtom
 Biz nimani taklif qilamiz:\n
 💰 Har haftada to‘lov\n
 🕒 Moslashuvchan ish jadvali\n
-EVOS’da har bir kuryer - jamoaning muhim a’zosi! @evos_jbot Telegram-botimizda anketani to‘ldiring va hoziroq EVOS bilan karyerangizni boshlang! 💼\n
+EVOS’da har bir kuryer - jamoaning muhim a’zosi! @evosdeliverybot Telegram-botimizda anketani to‘ldiring va hoziroq EVOS bilan karyerangizni boshlang! 💼\n
 ➖➖➖
 """
     await message.answer_photo(caption=txt,photo=img ,reply_markup=btn)
@@ -301,6 +301,6 @@ async def boshish(message: Message):
 Что мы предлагаем:\n
 💰 Оплата каждую неделю\n
 🕒 Гибкий график работы\n
-В EVOS каждый курьер — важная часть команды! Заполняйте анкету в нашем телеграм-боте @evos_jbot и начните свою карьеру с EVOS прямо сейчас! 💼\n
+В EVOS каждый курьер — важная часть команды! Заполняйте анкету в нашем телеграм-боте @evosdeliverybot и начните свою карьеру с EVOS прямо сейчас! 💼\n
 """
     await message.answer_photo(caption=txt,photo=img ,reply_markup=btn_ru)
