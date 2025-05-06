@@ -30,7 +30,7 @@ filliallar_btn=ReplyKeyboardMarkup(
 )
 geolokatsiya_btn=ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="Geolokatsiyani yuborish"),],
+        [KeyboardButton(text="Geolokatsiyani yuborish",request_location=True),],
         [KeyboardButton(text="orqaga"),],
     ],resize_keyboard=True,
 )
@@ -75,7 +75,7 @@ toshkent_sh_btn_ru=ReplyKeyboardMarkup(
 
 geolokatsiya_btn_ru=ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="отправить геолокацию"),],
+        [KeyboardButton(text="отправить геолокацию",request_location=True),],
         [KeyboardButton(text="⬅Назад"),],
     ],resize_keyboard=True,
 )

@@ -46,6 +46,21 @@ async def bosh_ofis(message: Message):
           "Mo'ljal: MAKRO THE TOWER")
     await message.answer_photo(photo=img,caption=text,reply_markup=filliallar_btn)
 
+@router.message(F.text=="Bo'sh ish o'rinlari")
+async def boshish_ish(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "bo'sh ish.png"))
+    txt= """Bo‘sh ish o‘rni: EVOS’da kuryer! 🚗🍔\n
+Jamoamizga qo‘shiling! Biz EVOS taomlarini yetkazib berish uchun shaxsiy avtomobilga ega kuryerlar, velokuryerlar va piyoda kuryerlarni izlayapmiz. Agar siz faol, punktual va moslashuvchan ish jadvalini izlayotgan bo‘lsangiz — bu ish aynan siz uchun!\n
+Biz nimani taklif qilamiz:\n
+💰 Har haftada to‘lov\n
+🕒 Moslashuvchan ish jadvali\n
+EVOS’da har bir kuryer - jamoaning muhim a’zosi! @evos_jbot Telegram-botimizda anketani to‘ldiring va hoziroq EVOS bilan karyerangizni boshlang! 💼\n
+➖➖➖
+"""
+    await message.answer_photo(caption=txt,photo=img ,reply_markup=btn)
+
+
+
 @router.message(F.text=="Toshkent sh")
 async def toshkent_sh(message: Message):
     await message.answer("Toshkent sh",reply_markup=toshkent_sh_btn)
@@ -107,7 +122,10 @@ async def orqagaaa(message: Message):
 @router.message(F.text=="Menyu")
 async def menyu(message: Message):
     img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "menu.png"))
-    text="EVOS sayitiga o'tish"
+    text=("Evos sayitiga o'tish (https://evos.uz/)\n"
+          "Instagram (https://www.instagram.com/evosuzbekistan/)\n"
+          "Telegram (https://t.me/evosdeliverybot)\n"
+          "Facebook (https://www.facebook.com/evosuzbekistan/")
     await message.answer_photo(photo=img,caption=text,reply_markup=btn)
 
 @router.message(F.text=="Yangiliklar")
@@ -216,9 +234,9 @@ async def nazad(message: Message):
     await message.answer("Назад",reply_markup=filliallar_btn_ru)
 
 
-@router.message(F.text=="⬅️ Назад")
-async def oorqaga(message: Message):
-    await message.answer("⬅️ Назад", reply_markup=btn)
+@router.message(F.text=="⬅Назад")
+async def oorqagaaa(message: Message):
+    await message.answer("⬅Назад", reply_markup=btn_ru)
 
 
 
@@ -274,4 +292,15 @@ async def uzz(message: Message):
 async def ruu(message: Message):
     await message.answer("Выбрано: 🇷🇺 Русский", reply_markup=btn_ru)
 
-
+@router.message(F.text=="💼 Вакансии")
+async def boshish(message: Message):
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "bo'sh ish.png"))
+    txt="""
+Вакансия: Курьер в EVOS! 🚗🍔\n
+Присоединяйтесь к нашей команде! Мы ищем курьеров с личным авто, а также велокурьеров и пеших курьеров для доставки блюд EVOS. Если вы активный, пунктуальный и ищете гибкий график — эта работа для вас!\n
+Что мы предлагаем:\n
+💰 Оплата каждую неделю\n
+🕒 Гибкий график работы\n
+В EVOS каждый курьер — важная часть команды! Заполняйте анкету в нашем телеграм-боте @evos_jbot и начните свою карьеру с EVOS прямо сейчас! 💼\n
+"""
+    await message.answer_photo(caption=txt,photo=img ,reply_markup=btn_ru)
