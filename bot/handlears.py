@@ -238,8 +238,6 @@ async def nazad(message: Message):
 async def oorqagaaa(message: Message):
     await message.answer("⬅Назад", reply_markup=btn_ru)
 
-
-
 @router.message(F.text=="☕️ Показать ближайший филиал")
 async def blijayushiy_fillial(message: Message):
     await message.answer("Отправьте свое местоположение для определения ближайшего филиала",reply_markup=geolokatsiya_btn_ru)
