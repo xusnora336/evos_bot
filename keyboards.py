@@ -39,9 +39,3 @@ def select_language():
 
     ], resize_keyboard=True)
     return buttons
-
-
-def telegram_web_app(lang):
-    url = "https://evos.uz/ru/" if lang == "ru" else "https://evos.uz/"
-    web_app = WebAppInfo(url=url)
-    return web_app
