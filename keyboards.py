@@ -7,9 +7,10 @@ from aiogram.types import (
 )
 from messages import messages
 
-# def telegram_web_app(lang):
-#     url="https://"
-
+def telegram_web_app(lang):
+    url=" https://xusnora336.github.io/evos_bot/"
+    web_app = WebAppInfo(url=url)
+    return web_app
 def start_buttons(lang):
     buttons = ReplyKeyboardMarkup(keyboard=[
         [KeyboardButton(text=f"{messages[lang]['about_company']}"),

@@ -12,7 +12,7 @@ router = Router()
 
 @router.message(Command("start"))
 async def command_start_handler(message: Message):
-    img = FSInputFile(os.path.join(os.path.dirname(__file__), "images", "evos.png"))
+    img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "evos.png"))
     full_name = f"{message.from_user.first_name} {message.from_user.last_name if message.from_user.last_name else ''}"
     lang = database.get_user_lang(message.from_user.id)
     user = database.get_user(message.from_user.id)
