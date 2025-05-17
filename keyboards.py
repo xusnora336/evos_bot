@@ -7,16 +7,14 @@ from aiogram.types import (
 )
 from messages import messages
 
-def telegram_web_app(lang):
-    url=" https://xusnora336.github.io/evos_bot/"
-    web_app = WebAppInfo(url=url)
-    return web_app
+url = "https://xusnora336.github.io/evos_bot/"
+
 def start_buttons(lang):
     buttons = ReplyKeyboardMarkup(keyboard=[
         [KeyboardButton(text=f"{messages[lang]['about_company']}"),
          KeyboardButton(text=f"{messages[lang]['branches']}")],
         [KeyboardButton(text=f"{messages[lang]['job_positions']}")],
-        [KeyboardButton(text=f"{messages[lang]['menu']}", web_app=telegram_web_app(lang)),
+        [KeyboardButton(text=f"{messages[lang]['menu']}", web_app=WebAppInfo(url=url)),
          KeyboardButton(text=f"{messages[lang]['news']}")],
         [
             KeyboardButton(text=f"{messages[lang]['contacts']}"),
