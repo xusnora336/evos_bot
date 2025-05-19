@@ -55,3 +55,54 @@ btn6.addEventListener("click", function (){
     }
 })
 
+btn7.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+btn8.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+btn9.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+btn10.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+btn11.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+btn12.addEventListener("click", function (){
+    if (tg.MainButton.isVisible()){
+        tg.MainButton.hide();
+    }
+    else {
+        tg.MainButton.show();
+    }
+})
+
+
+
