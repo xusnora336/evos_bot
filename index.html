@@ -1,105 +1,149 @@
 <!DOCTYPE html> <!-- Bu sahifaning HTML ekanligini bildiradi -->
 <html lang="en"> <!-- Sahifa ingliz tilida bo'ladi -->
-<head> <!-- Sahifaning "boshi", bu yerda sahifa haqida ma'lumotlar yoziladi -->
-    <meta charset="UTF-8"> <!-- Belgilar to'plami, ruscha harflar chiqishi uchun kerak -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Telefonlarda yaxshi ko'rinish uchun sahifani moslashtiradi -->
-    <title>Document</title> <!-- Sahifaning nomi, brauzerda ko'rinadi -->
-    <link rel="stylesheet" href="style.css"> <!-- style.css faylini ulaydi, bu sahifaga dizayn beradi -->
+<head> <!-- Sahifaning "boshi", ma'lumotlar joylashadi -->
+	<meta charset="UTF-8"> <!-- Ruscha va boshqa harflar uchun belgi to'plami -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Telefonlarda yaxshi ko'rinish uchun -->
+	<title>Burger Shop</title> <!-- Sahifa nomi brauzerda ko'rinadi -->
+	<link rel="stylesheet" href="style (2).css"> <!-- style (2).css faylini ulaydi, dizayn uchun -->
 </head>
-<body> <!-- Sahifaning "tanasi", bu yerda ko'rinadigan narsalar bo'ladi -->
-<div class="container"> <!-- Asosiy konteyner, hamma narsa shu ichida joylashadi -->
-    <div class="inner"> <!-- Mahsulotlarni ikki ustunga joylashtirish uchun ichki div -->
-        <div class="item"> <!-- Birinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_1.png" alt=""> <!-- 1.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Burger: </b> 32.000
-            </p>
-            <button class="btn" id="btn1">Add</button> <!-- "Add" tugmasi, id="btn1" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Ikkinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_2.png" alt=""> <!-- 2.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Mini Lavash: </b> 33.000
-            </p>
-            <button class="btn" id="btn2">Add</button> <!-- "Add" tugmasi, id="btn2" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Uchinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_3.png" alt=""> <!-- 3.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Tovuqli doner: </b> 53.000
-            </p>
-            <button class="btn" id="btn3">Add</button> <!-- "Add" tugmasi, id="btn3" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- To'rtinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_4.png" alt=""> <!-- 4.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Mini motdog: </b> 13.000
-            </p>
-            <button class="btn" id="btn4">Add</button> <!-- "Add" tugmasi, id="btn4" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Beshinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_5.png" alt=""> <!-- 5.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Bolalarga kombo: </b> 20.000
-            </p>
-            <button class="btn" id="btn5">Add</button> <!-- "Add" tugmasi, id="btn5" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_6.png" alt=""> <!-- 6.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Pepsi 1,5: </b> 22.000
-            </p>
-            <button class="btn" id="btn6">Add</button> <!-- "Add" tugmasi, id="btn6" bilan belgilanadi -->
-        </div>
-
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_7.png" alt=""> <!-- 7.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Achiq lavash: </b> 35.000
-            </p>
-            <button class="btn" id="btn7">Add</button> <!-- "Add" tugmasi, id="btn7" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_8.png" alt=""> <!-- 8.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>katta shaurma: </b> 35.000
-            </p>
-            <button class="btn" id="btn8">Add</button> <!-- "Add" tugmasi, id="btn8" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_9.png" alt=""> <!-- 9.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Trindvich tovuqli: </b> 36.000
-            </p>
-            <button class="btn" id="btn9">Add</button> <!-- "Add" tugmasi, id="btn9" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_10.png" alt=""> <!-- 10.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Katta fri: </b> 25.000
-            </p>
-            <button class="btn" id="btn10">Add</button> <!-- "Add" tugmasi, id="btn10" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_11.png" alt=""> <!-- 11.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Salat: </b> 30.000
-            </p>
-            <button class="btn" id="btn11">Add</button> <!-- "Add" tugmasi, id="btn11" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="image/img_12.png" alt=""> <!-- 12.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Maxito: </b> 17.000
-            </p>
-            <button class="btn" id="btn12">Add</button> <!-- "Add" tugmasi, id="btn12" bilan belgilanadi -->
-        </div>
-
-    </div>
-</div>
-<div class="usercard" id="usercard"></div> <!-- Foydalanuvchi ismini ko'rsatish uchun bo'sh joy -->
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="app.js"></script> <!-- app.js faylini ulaydi, bu sahifaga harakat qo'shadi -->
+<body> <!-- Sahifaning "tanasi", ko'rinadigan narsalar shu yerda -->
+	<div class="container"> <!-- Hamma narsani o'z ichiga oladigan konteyner -->
+		<div class="inner"> <!-- Mahsulotlarni ikki ustunga joylashtiradi -->
+			<div class="item"> <!-- 1-mahsulot joyi -->
+				<img class="img" src="image/img_1.png" alt="Burger"> <!-- Burger rasmi -->
+				<p>Burger: 32.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-1"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter1"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn1">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count1">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 2-mahsulot joyi -->
+				<img class="img" src="image/img_2.png" alt="Mini Lavash"> <!-- Mini Lavash rasmi -->
+				<p>Mini Lavash: 33.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-2"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter2"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn2">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count2">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 3-mahsulot joyi -->
+				<img class="img" src="image/img_3.png" alt="Tovuqli Doner"> <!-- Tovuqli Doner rasmi -->
+				<p>Tovuqli doner: 53.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-3"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter3"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn3">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count3">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 4-mahsulot joyi -->
+				<img class="img" src="image/img_4.png" alt="Mini Motdog"> <!-- Mini Motdog rasmi -->
+				<p>Mini motdog: 13.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-4"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter4"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn4">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count4">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 5-mahsulot joyi -->
+				<img class="img" src="image/img_5.png" alt="Bolalarga Kombo"> <!-- Bolalarga Kombo rasmi -->
+				<p>Bolalarga kombo: 20.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-5"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter5"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn5">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count5">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 6-mahsulot joyi -->
+				<img class="img" src="image/img_6.png" alt="Pepsi 1,5"> <!-- Pepsi 1,5 rasmi -->
+				<p>Pepsi 1,5: 22.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-6"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter6"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn6">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count6">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 7-mahsulot joyi -->
+				<img class="img" src="image/img_7.png" alt="Achiq Lavash"> <!-- Achiq Lavash rasmi -->
+				<p>Achiq lavash: 35.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-7"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter7"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn7">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count7">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 8-mahsulot joyi -->
+				<img class="img" src="image/img_8.png" alt="Katta Shaurma"> <!-- Katta Shaurma rasmi -->
+				<p>Katta shaurma: 35.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-8"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter8"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn8">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count8">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 9-mahsulot joyi -->
+				<img class="img" src="image/img_9.png" alt="Trindvich Tovuqli"> <!-- Trindvich Tovuqli rasmi -->
+				<p>Trindvich tovuqli: 36.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-9"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter9"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn9">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count9">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 10-mahsulot joyi -->
+				<img class="img" src="image/img_10.png" alt="Katta Fri"> <!-- Katta Fri rasmi -->
+				<p>Katta fri: 25.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-10"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter10"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn10">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count10">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 11-mahsulot joyi -->
+				<img class="img" src="image/img_11.png" alt="Salat"> <!-- Salat rasmi -->
+				<p>Salat: 30.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-11"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter11"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn11">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count11">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+			<div class="item"> <!-- 12-mahsulot joyi -->
+				<img class="img" src="image/img_12.png" alt="Maxito"> <!-- Maxito rasmi -->
+				<p>Maxito: 17.000</p> <!-- Mahsulot nomi va narxi -->
+				<div class="button-container" id="btn-container-12"> <!-- Tugmalar uchun joy -->
+					<div class="counter" id="counter12"> <!-- Son va +/- tugmalar -->
+						<button class="btn minus-btn" id="rbtn12">-</button> <!-- Minus tugmasi -->
+						<span class="count" id="count12">0</span> <!-- Mahsulot soni -->
+						<button class="btn plus-btn">+</button> <!-- Plus tugmasi -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="usercard" id="usercard"></div> <!-- Foydalanuvchi ismi ko'rinadigan joy -->
+	<script src="app.js"></script> <!-- app.js faylini ulaydi, harakatlar uchun -->
 </body>
 </html>
