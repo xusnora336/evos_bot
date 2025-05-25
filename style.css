@@ -1,71 +1,39 @@
 body {
-	margin: 0; /* Sahifaning chetlarida bo'sh joy yo'q */
-	padding: 0; /* Ichki bo'shliq yo'q */
-	font-size: 18px; /* Matn o'lchami 18 piksel */
-	color: var(--tg-theme-text-color); /* Matn rangi Telegramdan olinadi */
-	background: var(--tg-theme-bg-color); /* Fon rangi Telegramdan olinadi */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
 }
-
 .container {
-	max-width: 500px; /* Sahifa kengligi 500 piksel, telefonlarda yaxshi ko'rinadi */
-	margin: 0 auto; /* Sahifani markazga joylashtiradi */
+    max-width: 400px;
 }
-
 .inner {
-	display: grid; /* Mahsulotlarni tarmoq shaklida joylashtiradi */
-	grid-template-columns: 1fr 1fr; /* Ikki ustun, teng kenglikda */
-	grid-template-rows: repeat(6, 250px); /* 6 qator, har biri 250 piksel - 12 mahsulot uchun */
-	gap: 10px; /* Mahsulotlar orasida 10px bo'shliq */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
 }
-
-.item {
-	display: flex; /* Elementlarni vertikal joylashtiradi */
-	flex-direction: column; /* Rasm, narx, tugmalar ketma-ket keladi */
-	align-items: center; /* Hamma narsa markazda */
-	justify-content: space-between; /* Elementlar orasida teng bo'shliq */
-	padding: 10px; /* Ichki bo'shliq 10 piksel */
-}
-
 .img {
-	width: 150px; /* Rasm kengligi 150 piksel */
-	max-height: 100px; /* Maksimal balandlik 100 piksel */
+    width: 150px;
+    height: 150px;
+    max-height: 100px;
 }
-
+.item {
+    text-align: center;
+}
 .btn {
-	display: inline-block; /* Tugma blok sifatida ko'rinadi */
-	padding: 10px 20px; /* Ichki bo'shliq: 10px yuqori-pastki, 20px yon */
-	border: none; /* Chegara yo'q */
-	background: rgb(248, 168, 24); /* Tugma foni sariq-nar-inji */
-	border-radius: 10px; /* Burchaklar yumaloq */
-	color: #fff; /* Matn oq rangda */
-	text-transform: uppercase; /* Matn katta harflarda */
-	font-weight: 700; /* Matn qalin */
-	transition: background .2s linear; /* Fon o'zgarishi silliq, 0.2 soniya */
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	background: rgb(248, 168, 24);
+	border-radius: 10px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+
+	transition: background .2s linear;
 }
 
-.btn:hover {
-	background: lightgreen; /* Sichqoncha ustida yashil bo'ladi */
-}
-
-.usercard {
-	text-align: center; /* Foydalanuvchi ismi markazda */
-	padding: 10px; /* Ichki bo'shliq 10 piksel */
-}
-
-.button-container {
-	display: flex; /* Tugmalar va sonni bir qatorda joylashtiradi */
-	justify-content: center; /* Markazda joylashadi */
-	align-items: center; /* Vertikal markazda */
-	gap: 10px; /* Elementlar orasida 10px bo'shliq */
-}
-
-.counter {
-	display: flex; /* Tugmalar va son bir qatorda */
-	align-items: center; /* Vertikal markazda */
-	gap: 10px; /* Elementlar orasida 10px bo'shliq */
-}
-
-.count {
-	font-size: 18px; /* Sonning matn o'lchami */
-	color: var(--tg-theme-text-color); /* Matn rangi Telegramdan */
+.num{
+    display: none;
 }
