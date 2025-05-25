@@ -14,7 +14,7 @@ def start_buttons(lang):
          KeyboardButton(text=f"{messages[lang]['branches']}")],
         [KeyboardButton(text=f"{messages[lang]['job_positions']}")],
         [KeyboardButton(text=f"{messages[lang]['menu']}",
-                        web_app=WebAppInfo(url="https://xusnora336.github.io/evos_bot/")),
+                        web_app=WebAppInfo(url="https://bunyodnaimov.github.io/p2-evos-test-bot/")),
          KeyboardButton(text=f"{messages[lang]['news']}")],
         [
             KeyboardButton(text=f"{messages[lang]['contacts']}"),
@@ -27,7 +27,6 @@ def start_buttons(lang):
         resize_keyboard=True)
 
     return buttons
-
 
 
 def select_language():
