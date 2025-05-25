@@ -159,7 +159,7 @@ rbtn6.addEventListener("click", function () {
 });
 
 
-abtn5.addEventListener("click", function () {
+abtn6.addEventListener("click", function () {
     count6.innerText = n_count6 += 1;
     count6.style.display = "inline-block";
     item6 = "ID_6/" + count6.innerText;
