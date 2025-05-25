@@ -6,6 +6,7 @@ from messages import messages, job_info
 router = Router()
 
 
+
 @router.message(F.text.in_(["🇺🇿/🇷🇺 Til", "🇺🇿/🇷🇺 Язык"]))
 async def get_language(message: Message):
     lang = database.get_user_lang(message.from_user.id)

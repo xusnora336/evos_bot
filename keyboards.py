@@ -29,6 +29,7 @@ def start_buttons(lang):
     return buttons
 
 
+
 def select_language():
     buttons = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="🇺🇿", callback_data="uz"),
