@@ -162,7 +162,7 @@ rbtn6.addEventListener("click", function () {
 abtn5.addEventListener("click", function () {
     count6.innerText = n_count6 += 1;
     count6.style.display = "inline-block";
-    item6 = "ID_6/" + count5.innerText;
+    item6 = "ID_6/" + count6.innerText;
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
 });
