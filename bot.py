@@ -4,8 +4,8 @@ from os import getenv
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, LabeledPrice, PreCheckoutQuery
 
-from commands import router as commands_router
-from handlears import router as handlears_router
+from commands import router as router_commands
+from handlears import router as router
 from dotenv import load_dotenv
 from menu import bot_commands
 from products import products
@@ -23,8 +23,8 @@ bot = Bot(token=TOKEN)
 
 dp = Dispatcher()
 
-dp.include_router(commands_router)
-dp.include_router(handlears_router)
+dp.include_router(router_commands)
+dp.include_router(router)
 
 
 @dp.message(F.func(lambda msg: msg.web_app_data if msg.web_app_data else None))
