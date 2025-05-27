@@ -63,7 +63,6 @@ async def pre_checkout(query: PreCheckoutQuery):
 
 @dp.message(F.func(lambda msg: msg.successful_payment if msg.successful_payment else None))
 async def successful_payment(msg: Message):
-    print(msg.successful_payment)
     await msg.answer("To'lov uchun raxmat!")
 
 
