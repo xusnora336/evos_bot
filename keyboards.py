@@ -10,7 +10,6 @@ from messages import messages
 
 from aiogram.types import  KeyboardButton, ReplyKeyboardMarkup
 
-
 btn=ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text="Kompaniya haqida"),

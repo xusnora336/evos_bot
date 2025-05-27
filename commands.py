@@ -10,7 +10,6 @@ from messages import messages
 router = Router()
 
 
-
 @router.message(Command("start"))
 async def command_start_handler(message: Message):
     img = FSInputFile(os.path.join(os.path.dirname(__file__), "image", "evos.png"))
