@@ -22,6 +22,7 @@ btn=ReplyKeyboardMarkup(
          KeyboardButton(text="uz/ru til")],
     ],resize_keyboard=True,)
 
+
 uz_ru_btn=ReplyKeyboardMarkup(
 
     keyboard=[
